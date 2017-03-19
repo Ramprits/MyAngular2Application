@@ -1,0 +1,22 @@
+<div class="card">
+  <div class="card-block">
+    <h4 class="card-title">{{event?.name}}</h4>
+    <div class="col-md-4">Date : <span for="" class="col-md-10">{{event.date}}</span></div>
+    <div class="col-md-4">Time : <span for="" class="col-md-10">{{event.time}}</span></div>
+    <div class="col-md-4">Price : <span for="" class="col-md-10">${{event.price}}</span></div>
+    <div *ngIf="event?.location">
+      <label for="" class="col-md-4">Address :
+      <span for="" class="col-md-4">{{event.location?.address}}</span>
+      <span for="" class="col-md-4">{{event.location?.city}}</span>
+      <span for="" class="col-md-4">{{event.location?.country}}</span>
+      </label>
+    </div>
+    <div *ngIf="event?.onlineURL">
+      <label for="" class="col-md-4">Online URL :<span for="" class="col-md-10">{{event.onlineURL}}</span></label>
+
+    </div>
+    <button (click)="handleClicked()" class="btn btn-primary btn-sm">Click me</button>
+  </div>
+</div>
+
+<br>

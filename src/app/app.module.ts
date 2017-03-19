@@ -9,12 +9,15 @@ import { eventThumbnailComponent } from './events/event-thumbnail.component';
 import { Approutes } from './routes';
 import { ToastrService } from './toastr.service';
 import { RouterModule } from "@angular/router";
+import { AddressComponent } from "app/Address/Address.component";
+import { AddressService } from "app/Address/Address.service";
 @NgModule({
   declarations: [
     AppComponent,
     EventListComponent,
     NavComponent,
-    eventThumbnailComponent
+    eventThumbnailComponent,
+    AddressComponent
   ],
   imports: [
     BrowserModule,
@@ -22,7 +25,7 @@ import { RouterModule } from "@angular/router";
     HttpModule,
     RouterModule.forRoot(Approutes)
   ],
-  providers: [ToastrService],
+  providers: [ToastrService,AddressService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
