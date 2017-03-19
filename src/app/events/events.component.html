@@ -1,0 +1,28 @@
+<div class="row top10 container">
+  <div class="col-md-6">
+    <div class="card" style="background-color:#b1b4b7">
+      <img class="card-img-top">
+      <div class="card-block">
+        <h4 class="card-title text-primary">{{event?.name}}</h4>
+
+        <label for="" class="col-md-2">Date</label>
+        <span for="" class="col-md-10">{{event.date}}</span>
+        <br>
+        <label for="" class="col-md-2">Time</label>
+        <span for="" class="col-md-10">{{event.time}}</span>
+        <br>
+        <label for="" class="col-md-2">Price</label>
+        <span for="" class="col-md-10">${{event.price}}</span>
+        <br>
+        <label for="" class="col-md-2">Address</label>
+        <span for="" class="col-md-10">{{event.location.address}}</span>
+
+        <span for="" class="col-md-10">{{event.location.city}}</span>
+        <span for="" class="col-md-10">{{event.location.country}}</span>
+        <br>
+        <button (click)="handleClickMe()" class="btn btn-primary btn-sm">Click me</button>
+
+      </div>
+    </div>
+  </div>
+</div>
