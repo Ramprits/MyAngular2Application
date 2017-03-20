@@ -7,6 +7,7 @@ import { EventListComponent } from './events/event-list.component';
 import { NavComponent } from './nav/nav.component';
 import { eventThumbnailComponent } from './events/event-thumbnail.component';
 import { Approutes } from './routes';
+import {BusyModule} from 'angular2-busy';
 import { ToastrService } from './toastr.service';
 import { RouterModule } from "@angular/router";
 import { AddressComponent } from "app/Address/Address.component";
@@ -23,6 +24,7 @@ import { AddressService } from "app/Address/Address.service";
     BrowserModule,
     FormsModule,
     HttpModule,
+    BusyModule,
     RouterModule.forRoot(Approutes)
   ],
   providers: [ToastrService,AddressService],

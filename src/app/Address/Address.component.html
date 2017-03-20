@@ -1,14 +1,11 @@
-<table class="table table-bordered">
-  <thead>
+<table class="table table-bordered " style="margin-top: 50px;" >
+  <thead class="bg-primary" style="color: white">
     <tr>
       <td>Address ID</td>
-      <td>Address Line1</td>
-      <td>Address Line 2</td>
+      <td>Address Line 1</td>
       <td>City</td>
       <td>State Province ID</td>
       <td>Postal Code</td>
-      <td>Spatial Location</td>
-      <td>Row Guid</td>
       <td>Modified Date</td>
     </tr>
   </thead>
@@ -16,13 +13,11 @@
     <tr *ngFor="let add of Address">
       <td>{{add.AddressID}}</td>
       <td>{{add.AddressLine1}}</td>
-      <td *ngIf="add?.AddressLine2" >{{add.AddressLine2}}</td>
       <td>{{add.City}}</td>
       <td>{{add.StateProvinceID}}</td>
       <td>{{add.PostalCode}}</td>
-      <td>{{add.SpatialLocation}}</td>
-      <td>{{add.rowguid}}</td>
-      <td>{{add.ModifiedDate}}</td>
+      <td>{{add.ModifiedDate | date}}</td>
     </tr>
   </tbody>
 </table>
+<div [ngBusy]="busy"></div>
