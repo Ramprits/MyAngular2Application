@@ -1,5 +1,5 @@
 /****** Script for SelectTopNRows command from SSMS  ******/
-SELECT  [AddressID]
+SELECT Top 50 [AddressID]
       ,[AddressLine1]
       ,[AddressLine2]
       ,[City]

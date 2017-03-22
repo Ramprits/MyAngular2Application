@@ -1,10 +1,14 @@
 import { Routes } from '@angular/router';
-import { EventListComponent } from './events/event-list.component';
+import { EventComponent } from './events/event-list.component';
 import { AddressComponent } from './Address/Address.component';
+import { EventListComponent } from "app/Event-List/Event-List.component";
+import { WelcomeComponent } from "app/welcome/welcome.component";
 
 export const Approutes: Routes = [
-  { path: 'Events', component: EventListComponent },
+  { path: 'Events', component: EventComponent },
   { path: 'Address', component: AddressComponent },
-  { path: '', redirectTo: '/Events', pathMatch: 'full' }
+  { path: 'EventList', component: EventListComponent },
+  { path: 'Welcome', component: WelcomeComponent },
+  { path: '', redirectTo: '/Welcome', pathMatch: 'full' }
 ];
 

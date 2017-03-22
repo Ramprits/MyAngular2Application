@@ -10,7 +10,7 @@ import { ToastrService } from '../toastr.service';
   `,
   styleUrls: ['./events.component.css']
 })
-export class EventListComponent implements OnInit {
+export class EventComponent implements OnInit {
 
   constructor(public toastr: ToastrService) { }
   handleClick(data) {

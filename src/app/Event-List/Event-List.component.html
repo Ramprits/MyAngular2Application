@@ -1,0 +1,18 @@
+<br>
+<div class="row" style="margin-top: 50px;">
+  <div class="col-md-5" *ngFor="let event of eventList">
+    <div class="list-group">
+      <a class="list-group-item list-group-item-action active">Name : {{event?.name}}</a>
+      <a class="list-group-item list-group-item-action">Date : {{event.date}}</a>
+      <a class="list-group-item list-group-item-action disabled">Time : {{event.time}}</a>
+      <a class="list-group-item list-group-item-action disabled">Price : {{event.price | number}}</a>
+      <div *ngIf="event?.location?.address">
+        <a class="list-group-item list-group-item-action disabled">Address : {{event.location?.address}}</a>
+      </div>
+      <div *ngIf="event?.onlineURL">
+        <a class="list-group-item list-group-item-action disabled">Online-URL : {{event.onlineURL}}</a>
+      </div>
+    </div>
+  </div>
+</div>
+
